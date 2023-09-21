@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>article {{ aa.id }}</h1>
+<ul>
+     <li>Headline:{{ aa.headline }}</li>
+    <li>Pub Date:{{ aa.pub_date | date:'Y-m-d' }}</li>
+    <li>created Date:{{ aa.created_at | date:'Y-m-d' }}</li>
+     <li>updated Date:{{ aa.updated_at | date:'Y-m-d' }}</li>
+</ul>
+</body>
+</html>

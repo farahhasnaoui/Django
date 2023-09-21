@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<a href="{% url 'add_view' %}">Add</a>
+<table>
+    <tr>
+        <th>Headline</th>
+        <th>pub Date</th>
+        <th>Ations</th>
+        <th>AtionsGV</th>
+    </tr>
+    {% for foo in a %}
+        <tr>
+    <td>{{ foo.headline }}</td>
+        <td>{{ foo.pub_date }}</td>
+        <td><a href="{% url 'DD' foo.id %}">detail</a></td>
+         <td><a href="{% url 'Delete' foo.id %}">delete</a>
+         <a href="{% url 'Update' foo.id %}">update</a>
+         </td>
+        <td><a href="{% url 'DeleteV' foo.id %}">delete_View</a>
+         <a href="{% url 'UpdateV' foo.id %}">update_view</a>
+        </td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
